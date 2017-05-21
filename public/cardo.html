@@ -1,0 +1,103 @@
+
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cardo</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/new.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+
+
+
+      <header class="transitions">
+      <h1 class="site-title"><i class="fa fa-credit-card" aria-hidden="false"></i> Cardo</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#tasksTab" class="transitions-all" onclick="reloadDOM();" id="tasksTabBtn" role="tab" data-toggle="tab" data-toggle="tooltip" data-placement="bottom" title="Home">
+              <i class="glyphicon glyphicon-home"></i>My Tasks <span id="tasksLength" class="badge"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#archiveTab" class="transitions-all" onclick="reloadDOM();" id="archiveTabBtn" role="tab" data-toggle="tab" data-toggle="tooltip" data-placement="bottom" title="Archive">
+              <i class="glyphicon glyphicon-inbox"></i> Archive <span id="archiveLength" class="badge"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#trashTab" class="transitions-all" onclick="reloadDOM();" id="trashTabBtn" role="tab" data-toggle="tab" data-toggle="tooltip" data-placement="bottom" title="Trash">
+              <i class="glyphicon glyphicon-trash"></i> Trash <span id="trashLength" class="badge"></span>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+      <h1 class="site-title"><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></h1>
+
+      </header>
+
+      <div class="container" id="editor">
+
+        <!-- Tasks Container -->
+        <div class="tab-content">
+          <!-- Tasks Section Tab -->
+          <div class="tab-pane active" id="tasksTab">
+            <!-- New Task Element -->
+            <div class="task clearfix" id="createTask">
+              <input id="task-title" name="task-title" type="text" value="" maxlength="50" placeholder="Add new task">
+              <textarea id="task-body" name="task-body" type="text" value="" placeholder="Content Here!"></textarea>
+              <div class="hiddendiv"></div>
+              <div class="task-controls">
+                <button id="newBtn" type="button" class="btn" onclick="TaskManager.add()"><i class="glyphicon glyphicon-ok"></i>Add Task</button>
+              </div>
+            </div>
+            <ul id="tasks-list" class="tasks-list transitions">
+              <!-- Created Tasks will be created here! -->
+            </ul>
+
+          </div>
+          <!-- Archive Section Tab -->
+          <div class="tab-pane" id="archiveTab">
+            <!-- Archived Tasks will be created here! -->
+            <ul id="archive-list" class="tasks-list">
+              <!-- Created Tasks will be created here! -->
+            </ul>
+          </div>
+          <!-- Trash Section Tab -->
+          <div class="tab-pane" id="trashTab">
+            <!-- Trashed Tasks will be created here! -->
+            <ul id="trash-list" class="tasks-list">
+              <!-- Created Tasks will be created here! -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <iframe id="preview"></iframe>​​​
+
+
+
+      <div id="alert" class="alert-box alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span></button>
+          <i class="glyphicon glyphicon-bullhorn"></i> <span id="alert-msg"></span></div>
+          <!-- Scripts -->
+          <script src="js/vendor/jquery.min.js"></script>
+          <script src="js/vendor/bootstrap.min.js"></script>
+          <script src="js/app.js"></script>
+          <script src="js/helpers.js"></script>
+          <script src="public\js\new.js"></script>
+        </body>
+        </html>

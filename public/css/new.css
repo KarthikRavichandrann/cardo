@@ -1,0 +1,9 @@
+#editor, #preview {
+    height: 700px;
+    width: 300px;
+    margin-left: inherit;
+}
+
+textarea {
+    resize: none;
+}​
